@@ -1,0 +1,26 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Song Classes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Audio file</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @song_classes.each do |song_class| %>
+      <tr>
+        <td><%= song_class.song_name %></td>
+        <td><%= link_to 'Show', song_class %></td>
+        <td><%= link_to 'Edit', edit_song_class_path(song_class) %></td>
+        <td><%= link_to 'Destroy', song_class, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<br>
+
+<%= link_to 'New Song class', new_song_class_path %>

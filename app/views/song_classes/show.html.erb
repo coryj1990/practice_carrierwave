@@ -1,0 +1,9 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Audio file:</strong>
+  <%= @song_class.audio_file %>
+</p>
+
+<%= link_to 'Edit', edit_song_class_path(@song_class) %> |
+<%= link_to 'Back', song_classes_path %>
