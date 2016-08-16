@@ -26,9 +26,11 @@ class SongClassesController < ApplicationController
   # POST /song_classes
   # POST /song_classes.json
   def create
+    binding.pry
     @song_class = SongClass.new(song_class_params)
     @song_class.audio_file = params[:file]
     @song_class.song_name = params['song_class']['song_name']
+    @song_class.album_ID = params['song_class']['album_ID']
     respond_to do |format|
       if @song_class.save
         format.html { redirect_to @song_class, notice: 'Song class was successfully created.' }

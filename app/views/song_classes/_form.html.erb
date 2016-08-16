@@ -12,6 +12,7 @@
   <% end %>
 
   <div class="field">
+    <%= f.collection_select :album_ID, Album.all, :id, :album_name, :prompt => 'Select an Album' %>
     <%= f.label :audio_file %><br>
     <%= f.text_field :song_name %><br>
     <%= f.file_field :audio_file %>

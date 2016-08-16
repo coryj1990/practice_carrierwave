@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :albums
   resources :song_classes
 
   # The priority is based upon order of creation: first created -> highest priority.
